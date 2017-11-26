@@ -1,0 +1,17 @@
+Line:
+
+Developers can use the array data structure implemented by the Line class.  The Line class has multiple
+methods that allow the developer to manipulate and access certain parts of the array that holds the members of the line.
+An example of another real-world representation that could use the same data structure as the Line class would be
+an online store handling which shipments should go out first based on the order in which they were received.
+
+Screen:
+
+Developers can use the object/array data structure implemented by the Screen class.  The Screen class allows
+you to look up which pixel contains the values of certain (x,y) coordinates through a simple key lookup
+based off a value in the matrix object. An example of another real-world representation that could use the same
+data structure as the Screen class would be a library where each book title could be represented as a key in an
+object with two values of Author and Date.
+  Example:
+  Library = {}
+  Library["The Grapes of Wrath"] = ["John Steinbeck", "1939"]
