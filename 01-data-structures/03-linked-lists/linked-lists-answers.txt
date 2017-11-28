@@ -1,0 +1,27 @@
+1.  When a computer accesses memory, it takes a chunk of it and loads it in the cache. When dealing with arrays,
+the memory used to store the array will be connected and next to each other.  Therefore, when the computer grabs a chunk
+of the array data from RAM, the cache will hold a large portion of this information held in the array.  Getting information from RAM
+is a slow process whereas getting the data from the cache is quicker.  With linked lists, the memory used to store that information
+will be scattered and in unrelated areas.  Therefore, when the computer grabs a chunk of memory from RAM and stores it in the cache, it is
+less likely that it will contain much of the linked lists data, which causes the computer to have to retrieve
+memory again from RAM which is a slow process.
+
+Array Benchmarks:
+
+Creating 10000 item array:   0.070000   0.070000   0.140000 (  0.134284)
+---------
+5000th element of array:    0.000000   0.000000   0.000000 (  0.000002)
+---------
+Delete 5000th element of array:   0.000000   0.000000   0.000000 (  0.000006)
+
+
+
+Linked List Benchmarks:
+
+Creating 10000 item linked list:
+---------
+
+5000th element of linked list:
+---------
+
+Delete 5000th element of linked list:
