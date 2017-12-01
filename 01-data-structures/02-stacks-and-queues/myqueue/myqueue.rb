@@ -9,21 +9,13 @@ class MyQueue
   end
 
   def enqueue(element)
-    if self.empty?
-      @queue[0] = element
-      @head = element
-      @tail = element
-    else
-      @tail = element
-    end
+    @queue[@queue.length] = element
+    @tail = @queue.last
+    @head = @queue[0]
   end
 
   def dequeue
-    if @queue.length === 1
-      @queue = Array.new
-    else
-      @queue = [@queue[1]]
-    end
+    @queue.shift
   end
 
   def empty?

@@ -1,0 +1,6 @@
+When the computer accesses memory, it grabs a local chunk and caches it for faster access. That chunk
+works well for arrays because they are stored next to each other in memory and that chunk will include a large
+portion of the array data.. However, if the array continues to double when a collision occurs, the new values that get inserted
+into the array can become further and further apart(fragmented) and therefore more and more likely that the computer grabs less
+and less information from that array when it grabs a chunk of it.  This causes the computer to do more RAM lookups which are
+very slow.

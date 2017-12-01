@@ -18,10 +18,10 @@ Delete 5000th element of array:   0.000000   0.000000   0.000000 (  0.000006)
 
 Linked List Benchmarks:
 
-Creating 10000 item linked list:
+Creating 10000 item linked list:   0.000000   0.000000   0.000000 (  0.001424)
 ---------
 
-5000th element of linked list:
+5000th element of linked list:   0.000000   0.000000   0.000000 (  0.000252)
 ---------
 
-Delete 5000th element of linked list:
+Delete 5000th element of linked list:  0.000000   0.000000   0.000000 (  0.000004)

@@ -9,10 +9,6 @@ class LinkedList
     if @head === nil
       @head = node
       @tail = node
-    elsif @head.next === nil && @head != nil
-      @tail.next = node
-      @tail = node
-      @head.next = @tail
     else
       @tail.next = node
       @tail = node
@@ -24,15 +20,14 @@ class LinkedList
     if @head === @tail
       @tail = nil
       @head = nil
-      return
+    else
+      current_node = @head
+      while current_node.next != @tail
+        current_node = current_node.next
+      end
+      current_node.next = nil
+      @tail = current_node
     end
-
-    current_node = @head
-    while current_node.next != @tail
-      current_node = current_node.next
-    end
-    current_node.next = nil
-    @tail = current_node
   end
 
   # This method prints out a representation of the list.
@@ -47,10 +42,10 @@ class LinkedList
   # This method removes `node` from the list and must keep the rest of the list intact.
   def delete(node)
     if node === @tail
-      self.remove_tail
+      remove_tail
       return
     elsif node === @head
-      self.remove_front
+      remove_front
       return
     else
       current_node = @head
@@ -66,10 +61,6 @@ class LinkedList
     if @head === nil
       @head = node
       @tail = node
-    elsif @head.next === nil && @head != nil
-      node.next = @tail
-      @head = node
-      @head.next = @tail
     else
       node.next = @head
       @head = node
@@ -78,6 +69,8 @@ class LinkedList
 
   # This method removes and returns the first node in the Linked List and must set Linked List's head to the second node.
   def remove_front
-    @head = @head.next
+    temp = @head
+    @head = nil
+    @head = temp.next
   end
 end

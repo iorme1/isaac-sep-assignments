@@ -19,7 +19,7 @@ RSpec.describe HashClass, type: Class do
       expect(lotr_movies.index(key, 6)).to eq 4
     end
   end
-
+  
   describe "#resize" do
     it "doubles the size of the array when invoked" do
       expect(lotr_movies.size).to eq 6
